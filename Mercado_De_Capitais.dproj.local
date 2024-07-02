@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/06/12 08:50:56.000.783,=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/12 11:12:05.000.146,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Mercado_De_Capitais.dproj</Transaction>
+    <Transaction>2024/06/14 13:21:10.000.259,=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/06/14 13:22:39.000.783,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\INI_Unit.pas</Transaction>
+    <Transaction>2024/06/14 13:22:39.000.783,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\INI_Unit.dfm</Transaction>
+    <Transaction>2024/06/14 13:24:23.000.750,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\LIST_CART.pas</Transaction>
+    <Transaction>2024/06/14 13:24:23.000.750,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\LIST_CART.dfm</Transaction>
+    <Transaction>2024/06/14 13:25:45.000.144,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\LIST_CART.dfm=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\LIST_CART_UNIT.dfm</Transaction>
+    <Transaction>2024/06/14 13:25:45.000.144,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\LIST_CART.pas=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\LIST_CART_UNIT.pas</Transaction>
+    <Transaction>2024/06/14 15:23:17.000.754,=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/14 15:41:25.000.035,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\DATA_Module.pas=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/14 15:41:25.000.035,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\DATA_Module.dfm=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/06/14 21:24:13.000.009,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\DATA_Module.pas=</Transaction>
+    <Transaction>2024/06/15 11:26:06.000.030,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\List_Carteira_Unit.pas=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\LIST_CART_UNIT.pas</Transaction>
+    <Transaction>2024/06/15 11:26:06.000.030,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\List_Carteira_Unit.dfm=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\LIST_CART_UNIT.dfm</Transaction>
+    <Transaction>2024/06/15 11:26:14.000.316,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Main_Unit.dfm=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\INI_Unit.dfm</Transaction>
+    <Transaction>2024/06/15 11:26:14.000.316,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Main_Unit.pas=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\INI_Unit.pas</Transaction>
+    <Transaction>2024/06/15 11:26:57.000.938,=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/15 11:27:29.000.392,=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/06/15 11:28:06.000.338,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\List_Acoes_Unit.dfm=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2024/06/15 11:28:06.000.338,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\List_Acoes_Unit.pas=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/06/15 16:34:41.000.079,=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/15 16:42:58.000.408,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Class_Unit.pas</Transaction>
+    <Transaction>2024/06/16 10:45:30.000.075,=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/16 10:46:14.000.669,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Cad_Carteira_Unit.pas=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/16 10:46:14.000.670,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Cad_Carteira_Unit.dfm=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/06/17 12:20:04.000.417,=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/17 12:20:15.000.545,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Class_Carteira_Unit.pas=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/27 00:01:31.000.941,=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/27 00:05:40.000.062,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Class_Acoes_Unit.pas</Transaction>
+    <Transaction>2024/06/27 16:03:04.000.571,=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/27 16:23:12.000.910,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Cad_Acoes_Unit.pas=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/27 16:23:12.000.910,C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Cad_Acoes_Unit.dfm=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/07/01 16:14:22.000.148,=C:\Users\danie\OneDrive\Documentos\Embarcadero\Studio\Projects\Mercado_De_Capitais.todo</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Main_Unit.pas"/>
+    <File Path="Main_Unit.dfm"/>
+    <File Path="List_Acoes_Unit.pas"/>
+    <File Path="List_Acoes_Unit.dfm"/>
+    <File Path="List_Carteira_Unit.pas"/>
+    <File Path="List_Carteira_Unit.dfm"/>
+    <File Path="Cad_Carteira_Unit.pas"/>
+    <File Path="Cad_Carteira_Unit.dfm"/>
+    <File Path="Cad_Acoes_Unit.pas"/>
+    <File Path="Cad_Acoes_Unit.dfm"/>
+    <File Path="Class_Carteira_Unit.pas"/>
+    <File Path="Class_Acoes_Unit.pas"/>
+    <File Path="Class_Unit.pas"/>
+  </ProjectSortOrder>
+</BorlandProject>
