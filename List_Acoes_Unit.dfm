@@ -53,6 +53,7 @@ object FRM_List_Acoes: TFRM_List_Acoes
         Visible = True
       end
       item
+        Alignment = taRightJustify
         Expanded = False
         FieldName = 'Data_Compra'
         Title.Alignment = taCenter
@@ -107,6 +108,7 @@ object FRM_List_Acoes: TFRM_List_Acoes
       Caption = 'Excluir'
       Enabled = False
       TabOrder = 0
+      OnClick = BTT_DeleteClick
     end
     object BTT_Edit: TButton
       AlignWithMargins = True
@@ -128,6 +130,7 @@ object FRM_List_Acoes: TFRM_List_Acoes
       Height = 33
       Align = alLeft
       Caption = 'Adicionar'
+      Enabled = False
       TabOrder = 2
       OnClick = BTT_AddClick
     end
@@ -184,7 +187,7 @@ object FRM_List_Acoes: TFRM_List_Acoes
       item
         Name = 'IDX_Ticket'
         Fields = 'Ticket'
-        Options = [ixUnique]
+        Options = [ixPrimary, ixUnique]
         Source = 'CLDS_Acoes'
       end>
     Params = <>

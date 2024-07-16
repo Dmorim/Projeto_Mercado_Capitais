@@ -36,6 +36,7 @@ type
     procedure Desativar_Botoes;
     procedure BTT_EditClick(Sender: TObject);
     procedure DBG_AcoesCellClick(Column: TColumn);
+    procedure BTT_DeleteClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,6 +49,7 @@ var
 implementation
 var
 Ticket_Selecionado: String;
+Carteira_Selecionada: String;
 {$R *.dfm}
 
 procedure TFRM_List_Acoes.BTT_AddClick(Sender: TObject);
@@ -65,15 +67,55 @@ begin
   Construir_DataSet;
 end;
 
- procedure TFRM_List_Acoes.BTT_EditClick(Sender: TObject);
+ procedure TFRM_List_Acoes.BTT_DeleteClick(Sender: TObject);
+var
+Carteira: TCarteira;
+Acao: TAcao;
+Confirmacao: Integer;
+Mensagem: String;
+
+begin
+  for carteira in Cart_Hold.Carteira do
+    begin
+      if carteira.Nome = Carteira_Selecionada then
+        break
+    end;
+  for Acao in carteira.Acoes do
+    begin
+      if Acao = Acao_Em_Uso then
+        break
+    end;
+
+  Mensagem := Format('Deseja excluir a ação "%s"?', [Acao.Ticket]);
+  Confirmacao := MessageDlg(Mensagem, mtConfirmation, [mbYes, mbNo], 0); // Mensagem de Confirmação
+  if Confirmacao = mrYes then
+    begin
+      Carteira.Acoes.Remove(Acao);
+      Acao.Free;
+      Carteira.Free;
+
+      Construir_DataSet;
+      Atualizar_Contador;
+    end;
+
+end;
+
+procedure TFRM_List_Acoes.BTT_EditClick(Sender: TObject);
  var
  Carteira: TCarteira;
  Acao: TAcao;
   begin
     for Carteira in Cart_Hold.Carteira do
-      for Acao in Carteira.Acoes do
+      begin
+        if Carteira.Nome = Carteira_Selecionada then
+          break
+      end;
+
+    for Acao in Carteira.Acoes do
+      begin
         if Acao.Ticket = Ticket_Selecionado then
-          break;  // Encontra a Ação que será editada
+          break
+      end;
 
     Tipo_Janela := True; // Define o tipo de Janela como Edição
     Acao_Em_Uso := Acao; // Passa a Ação que será editada para a Tela
@@ -110,35 +152,43 @@ procedure TFRM_List_Acoes.Atualizar_Contador; // Procedure que atualiza a contag
 
 procedure TFRM_List_Acoes.Construir_DataSet; // Procedure que atualiza os itens do DataSet de acordo com os itens em TAcoes
 var
-  cart: TCarteira;
+  carteira: TCarteira;
   acoes: TAcao;
+  coluna: TColumn;
 begin
   CLDS_Acoes.DisableControls; // Desativa atualizações visuais durante o loop
   try
     CLDS_Acoes.EmptyDataSet; // Limpa o dataset
-    for cart in Cart_Hold.Carteira do // Passa por todas as carteiras listadas e Cart_Hold
-      for acoes in cart.Acoes do // Passa por todos as ações listadas em Carteiras
-            begin
-              CLDS_Acoes.Append; // Insere um novo registro
-              CLDS_Acoes.FieldByName('Ticket').AsString := acoes.Ticket;
-              CLDS_Acoes.FieldByName('Carteira').AsString := cart.Nome;
-              CLDS_Acoes.FieldByName('Cotacao').AsCurrency := acoes.Cotacao;
-              CLDS_Acoes.FieldByName('Data_Compra').AsDateTime := acoes.Data_Compra;
-              CLDS_Acoes.Post; // Salva o registro
-            end;
+    for carteira in Cart_Hold.Carteira do // Passa por todas as carteiras listadas e Cart_Hold
+      for acoes in carteira.Acoes do // Passa por todos as ações listadas em Carteiras
+        begin
+          CLDS_Acoes.Append; // Insere um novo registro
+          CLDS_Acoes.FieldByName('Ticket').AsString := acoes.Ticket;
+          CLDS_Acoes.FieldByName('Carteira').AsString := carteira.Nome;
+          CLDS_Acoes.FieldByName('Cotacao').AsCurrency := acoes.Cotacao;
+          CLDS_Acoes.FieldByName('Data_Compra').AsDateTime := acoes.Data_Compra;
+          CLDS_Acoes.Post; // Salva o registro
+        end;
+
+    coluna := DBG_Acoes.Columns[0];
 
     if Cart_Hold.Carteira.Count > 0 then
-    begin
-      if cart.Acoes.Count > 0 then
-        begin
-          Ativar_Botoes;
-          exit;
-        end
-      else
-        begin
-          Desativar_Botoes;
-        end;
-    end;
+      begin
+        BTT_Add.Enabled := True;
+
+        for carteira in Cart_Hold.Carteira do
+          if carteira.Acoes.Count > 0 then
+            begin
+              Ativar_Botoes;
+              DBG_AcoesCellClick(coluna);
+              break
+            end
+          else
+            begin
+              Desativar_Botoes;
+            end;
+      end;
+
   finally
     CLDS_Acoes.EnableControls; // Reativa atualizações visuais
   end;
@@ -166,6 +216,7 @@ procedure TFRM_List_Acoes.Ativar_Botoes;
 procedure TFRM_List_Acoes.DBG_AcoesCellClick(Column: TColumn);
   begin
     Ticket_Selecionado := DBG_Acoes.Fields[0].AsString;
+    Carteira_Selecionada := DBG_Acoes.Fields[1].AsString;
   end;
 
 procedure TFRM_List_Acoes.Desativar_Botoes;

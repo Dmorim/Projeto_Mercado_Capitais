@@ -75,8 +75,6 @@
       Enabled = False
       TabOrder = 1
       OnClick = BTT_EditClick
-      ExplicitLeft = 94
-      ExplicitTop = 5
     end
     object BTT_Delete: TButton
       AlignWithMargins = True

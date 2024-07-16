@@ -25,6 +25,7 @@ type
     procedure Ini_Form(Sender: TObject);
     procedure Modo_Edicao;
     procedure Troca_Carteira;
+    function Index_Carteira: Integer;
   private
     { Private declarations }
   public
@@ -129,10 +130,9 @@ Carteira: TCarteira;
 Contador: Integer;
   begin
     contador := 0;
-
     EDT_Ticket_Acoes.Text := Acao_Em_Uso.Ticket;
     EDT_Cotacao_Acoes.Text := currtostrf(Acao_Em_Uso.Cotacao, ffCurrency, 2);
-    CBB_Carteira_Acoes.ItemIndex := contador; for Carteira in Cart_Hold.Carteira do; Inc(contador); if Carteira.Nome = Carteira_Em_Uso.Nome then; exit;
+    CBB_Carteira_Acoes.ItemIndex := Index_Carteira;
     DTP_Compra_Acoes.Date := Acao_Em_Uso.Data_Compra;
   end;
 
@@ -140,13 +140,28 @@ procedure TFRM_Cadastro_Acoes.Troca_Carteira;
 var
 Carteira: TCarteira;
   begin
-    Carteira_Em_Uso.Remover_Acao(Acao_Em_Uso);
     for Carteira in Cart_Hold.Carteira do
       begin
         if Carteira.Nome = CBB_Carteira_Acoes.Text then
         break
       end;
-    Carteira.Add_Acao(Acao_Em_Uso)
+    Carteira.Add_Acao(Acao_Em_Uso);
+    Carteira_Em_Uso.Remover_Acao(Acao_Em_Uso);
   end;
 
+function TFRM_Cadastro_Acoes.Index_Carteira: Integer;
+var
+Carteira: TCarteira;
+Contador: Integer;
+  begin
+    Contador := - 1;
+    for Carteira in Cart_Hold.Carteira do
+      begin
+        Inc(Contador);
+        if Carteira.Nome = Carteira_Em_Uso.Nome then
+          break
+      end;
+
+    result := Contador
+  end;
 end.
